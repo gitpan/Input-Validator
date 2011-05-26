@@ -5,7 +5,7 @@ use warnings;
 
 use base 'Input::Validator::Base';
 
-our $VERSION = '0.001001';
+our $VERSION = '0.001002';
 
 use Input::Validator::Bulk;
 use Input::Validator::Condition;
@@ -137,13 +137,13 @@ sub validate {
     my $self   = shift;
     my $params = shift;
 
-    $self->clear_errors;
-
-    $self->_flag_unknown($params);
-
-    $self->_populate_fields($params);
-
     while (1) {
+        $self->clear_errors;
+
+        $self->_flag_unknown($params);
+
+        $self->_populate_fields($params);
+
         $self->_validate_fields;
         $self->_validate_groups;
 

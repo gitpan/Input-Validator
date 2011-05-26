@@ -1,3 +1,4 @@
+.shipit
 Changes
 lib/Input/Validator.pm
 lib/Input/Validator/Base.pm
@@ -37,6 +38,7 @@ t/constraint/time.t
 t/constraint/unique.t
 t/field.t
 t/group.t
+t/inflate.t
 t/validator-bulk.t
 t/validator-condition.t
 t/validator-explicit.t
