@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Input-Validator
-version:            0.001002
+version:            0.001003
 abstract:           Data validator
 author:
     - Viacheslav Tykhanovskyi <vti@cpan.org>

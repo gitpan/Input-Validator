@@ -5,7 +5,7 @@ use warnings;
 
 use base 'Input::Validator::Base';
 
-our $VERSION = '0.001002';
+our $VERSION = '0.001003';
 
 use Input::Validator::Bulk;
 use Input::Validator::Condition;
@@ -28,6 +28,10 @@ sub BUILD {
 
     return $self;
 }
+
+sub messages { @_ > 1 ? $_[0]->{messages} = $_[1] : $_[0]->{messages} }
+sub trim     { @_ > 1 ? $_[0]->{trim}     = $_[1] : $_[0]->{trim} }
+sub explicit { @_ > 1 ? $_[0]->{explicit} = $_[1] : $_[0]->{explicit} }
 
 sub field {
     my $self = shift;
@@ -215,7 +219,7 @@ sub values {
 
     foreach my $field (CORE::values %{$self->{fields}}) {
         $values->{$field->name} = $field->value
-          if defined $field->value && !$field->error;
+          if defined $field->value;
     }
 
     return $values;
