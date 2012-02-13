@@ -5,7 +5,7 @@ use warnings;
 
 use base 'Input::Validator::Base';
 
-our $VERSION = '0.001004';
+our $VERSION = '0.001005';
 
 use Input::Validator::Bulk;
 use Input::Validator::Condition;
@@ -445,6 +445,8 @@ Alex Voronov
 Anatoliy Lapitskiy
 
 Glen Hinkle
+
+Marcus Ramberg
 
 Naoya Ito
 
